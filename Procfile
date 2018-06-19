@@ -1,0 +1,1 @@
+web: sh -c 'cd ki_labs_backend && gunicorn ki_labs_backend.wsgi.wsgi_heroku --log-file -'
