@@ -107,6 +107,30 @@ class CalendarTimeSlotView(generics.ListCreateAPIView):
         return Response(serializer.data)
 
 
+class CalendarTimeSlotDetailView(generics.RetrieveDestroyAPIView):
+    """
+    get:
+    Returns the details of a time slot.
+
+    ###Response schema
+
+        {
+            "id" : Unique ID for the created time slot,
+            "creator" : The username and type of the creator,
+            "start_datetime" : Start of the time slot (YYYY-MM-DDThh:mm:ss),
+            "end_datetime" : End of the time slot (YYYY-MM-DDThh:mm:ss),
+            "rrule" : Recurrence rule for repeating events, following
+                      https://tools.ietf.org/html/rfc5545#section-3.8.5,
+            },...
+
+    delete:
+    Deletes a time slot.
+    """
+
+    queryset = CalendarTimeSlot.objects.all()
+    serializer_class = CalendarTimeSlotSerializer
+
+
 class TimeSlotIntersectionView(APIView):
     """
     get:

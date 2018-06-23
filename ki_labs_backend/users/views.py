@@ -95,3 +95,25 @@ class CalendarUserView(generics.ListCreateAPIView):
 
         serializer = CalendarUserSerializer(queryset, many = True)
         return Response(serializer.data)
+
+
+class CalendarUserDetailView(generics.RetrieveDestroyAPIView):
+    """
+    get:
+    Returns details of an user.
+
+    ###Response schema
+        {
+                "username" : Username of the created user,
+                "is_interviewer" : True if the created user is an interviewer,
+                                   else False.
+            }
+
+    delete:
+    Deletes an user.
+    """
+
+    queryset = CalendarUser.objects.all()
+    serializer_class = CalendarUserSerializer
+    lookup_field = "username"
+    lookup_url_kwarg = "username"
