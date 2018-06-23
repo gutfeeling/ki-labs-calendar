@@ -93,10 +93,3 @@ class CalendarTimeSlot(models.Model):
         return "Start datetime : {0}, End datetime : {1}, RRule : {2}".format(
             self.start_datetime, self.end_datetime, self.rrule
             )
-
-    class Meta:
-        # An user should not be able to create the same time slot again and
-        # again.
-        unique_together = (
-            ("start_datetime", "end_datetime", "creator", "rrule"),
-            )
