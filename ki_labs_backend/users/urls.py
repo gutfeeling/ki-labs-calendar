@@ -1,11 +1,14 @@
-from django.conf.urls import url
+from django.urls import re_path, path
 
-from users.views import CalendarUserView
+from users.views import CalendarUserView, CalendarUserDetailView
 
 urlpatterns = [
-    url(
-        regex = "^$",
-        view = CalendarUserView.as_view(),
+    re_path(
+        "^$", CalendarUserView.as_view(),
         name = "calendar_user_view"
+        ),
+    path(
+        "<str:username>/", CalendarUserDetailView.as_view(),
+        name = "calendar_user_detail_view"
         ),
     ]
