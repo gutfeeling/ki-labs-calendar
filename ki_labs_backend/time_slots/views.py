@@ -115,7 +115,7 @@ class CalendarTimeSlotDetailView(generics.RetrieveDestroyAPIView):
     ###Response schema
 
         {
-            "id" : Unique ID for the created time slot,
+            "id" : Unique ID of the time slot,
             "creator" : The username and type of the creator,
             "start_datetime" : Start of the time slot (YYYY-MM-DDThh:mm:ss),
             "end_datetime" : End of the time slot (YYYY-MM-DDThh:mm:ss),

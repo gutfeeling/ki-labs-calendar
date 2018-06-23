@@ -104,7 +104,7 @@ class CalendarUserDetailView(generics.RetrieveDestroyAPIView):
 
     ###Response schema
         {
-                "username" : Username of the created user,
+                "username" : Username,
                 "is_interviewer" : True if the created user is an interviewer,
                                    else False.
             }
