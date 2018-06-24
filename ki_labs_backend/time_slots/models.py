@@ -8,7 +8,6 @@ from utils.datetime_ops import get_rrule_format
 
 class CalendarTimeSlot(models.Model):
 
-    # Add help text
     start_datetime = models.DateTimeField(
         help_text = (
             "The start of the time slot, expressed as a datetime formatted as "
@@ -55,7 +54,7 @@ class CalendarTimeSlot(models.Model):
 
         # First, get all one hour time slots corresponding to the single
         # event. If the single event goes on from 9 o clock to 11 o clock,
-        # then this should produce to one hour time slots, one starting from
+        # then this should produce two one hour time slots, one starting from
         # 9, and another starting from 10.
 
         diff = self.end_datetime - self.start_datetime
