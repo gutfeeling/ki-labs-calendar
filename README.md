@@ -10,6 +10,11 @@ A REST calendar API that lets interviewers and candidates do the following:
 
 The API is available publicly at http://ki-labs.herokuapp.com/. 
 
+The API is running on a free dyno on Heroku, so it might take a few seconds to start up when you make the first request.
+Please be patient.
+
+The database has already been populated with some users and time slots according to the examples in this [PDF](https://github.com/gutfeeling/ki-labs-calendar/blob/master/2018_Backend_Engineer_home_task.pdf).
+
 ## Documentation 
 
 The API is documented at /docs/. The publicily available docs are at http://ki-labs.herokuapp.com/docs/.
