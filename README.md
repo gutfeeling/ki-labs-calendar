@@ -17,7 +17,7 @@ The database has already been populated with some users and time slots according
 
 ## Documentation 
 
-The API is documented at /docs/. The publicily available docs are at http://ki-labs.herokuapp.com/docs/.
+The API is documented at /docs/. The publicly available docs are at http://ki-labs.herokuapp.com/docs/.
 
 ## Try it out locally (some fussing involved)
 
